@@ -85,7 +85,7 @@ status:
     development is self-contained over Mathlib v4.32.0 (Lean 4.32.0).
   sorry_count: 0
   sorry_in_definitions: 0
-  axioms: []
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
   main_results:
     - "AllOnesGallardo.main"
     - "AllOnesGallardo.A071642_terms_ge_two"
@@ -127,7 +127,11 @@ review:
     Statement audit of Challenge.lean against OEIS A071642 and TheoremDB P12771 by the author.
     Mathematical review of the informal proof by Claude Fable 5.1, with three independent finite
     checkers (SymPy; two bit-polynomial Rabin tests) agreeing on n ≤ 129. Axiom audit by
-    #print axioms on every compared declaration.
+    #print axioms on every compared declaration (main, A071642_terms_ge_two, boundary_one) and
+    on every library lemma: each depends exactly on propext, Classical.choice and Quot.sound,
+    the three standard Lean axioms and nothing else; no sorry, no native_decide, no user axioms.
+    The same file was independently kernel-checked by TheoremDB's pinned-world verifier
+    (Lean 4.33.0-rc1) with the identical axiom set.
 
 alignment:
   namespace: "AllOnesGallardo"
