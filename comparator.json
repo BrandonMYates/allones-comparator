@@ -1,0 +1,16 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "AllOnesGallardo.main",
+    "AllOnesGallardo.A071642_terms_ge_two",
+    "AllOnesGallardo.boundary_one"
+  ],
+  "definition_names": [
+    "AllOnesGallardo.allOnes",
+    "AllOnesGallardo.P",
+    "AllOnesGallardo.allOnesP"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
